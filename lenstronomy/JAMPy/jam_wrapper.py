@@ -79,7 +79,9 @@ class JAMWrapper(JAMWrapperBase, GalkinObservation):
             )
             sigma2_lum_weighted_sup = vrms_sup**2 * surf_bright_sup
             if convolved:
-                sigma2_lum_weighted_sup = self.convolve(sigma2_lum_weighted_sup)
+                sigma2_lum_weighted_sup = self.convolve(
+                    sigma2_lum_weighted_sup, supersampling_factor
+                )
                 surf_bright_sup = self.convolve(surf_bright_sup, supersampling_factor)
         else:
             vrms_sup, surf_bright_sup = self.dispersion_points(

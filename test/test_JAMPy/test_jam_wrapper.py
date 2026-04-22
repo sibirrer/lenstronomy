@@ -153,8 +153,8 @@ class TestJAMWrapperSpherical(object):
             "psf_type": "PIXEL",
             "fwhm": 0.5,
             "kernel": self.pix_kernel,
-            "supersampling_factor": 1,
-            "delta_pix": x[1] - x[0],
+            "supersampling_factor": 3,
+            "delta_pix": (x[1] - x[0]) / 3,
         }
         self.jam_spherical_grid_pixel = JAMWrapper(
             kwargs_model=kwargs_model_jampy | {"symmetry": "spherical"},

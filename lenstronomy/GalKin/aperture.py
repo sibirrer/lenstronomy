@@ -10,7 +10,7 @@ from lenstronomy.GalKin.aperture_types import (
     downsample_values_to_bins,
 )
 
-__all__ = ["Aperture"]
+__all__ = ["Aperture", "downsample_values_to_bins"]
 """Class that defines the aperture of the measurement (e.g. slit, integral field
 spectroscopy regions etc).
 
